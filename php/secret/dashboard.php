@@ -44,21 +44,21 @@
         $stmt->execute();
         $results = $stmt->get_result();
 
-         echo '<table align="center">
+         echo "<table align=\"center\">
             <tr>
+                <th>ID</th>    
                 <th>First Name</th>    
                 <th>Last Name</th>    
                 <th>Email</th>    
                 <th>Date Signed Up</th>    
-            </tr>';
+            </tr>";
 
         foreach ($results as $result) {
-            echo '    <tr>
-                        <td>{$result[1}</td>
-                        <td>{$result[2}</td>
-                        <td>{$result[3}</td>
-                        <td>{$result[4}</td>
-                      </tr>';
+            echo "<tr>";
+            foreach ($result as $res){
+                echo "<td>$res</td>";
+            }
+            echo"</tr>";
         }
         echo '</table>';
     ?>
