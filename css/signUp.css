@@ -1,0 +1,56 @@
+@font-face{
+    font-family: headers;
+    src: url(../fonts/BebasNeue-Regular.otf)
+}
+
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),  url(../files/download.jpeg);
+  background-position: center;
+  background-size: cover; 
+}
+
+h1, h2, h3, h4, h5{
+  color: rgb(187, 187, 187);
+  font-family: headers;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+  }
+
+.centerVert{
+  padding: 250px 0;
+}
+
+.btn{
+  background-color:  rgb(187, 187, 187, 0);
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: rgb(187, 187, 187, 0);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  color: #fff;
+}
