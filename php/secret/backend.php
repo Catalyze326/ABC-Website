@@ -6,7 +6,7 @@
     $uName = $_POST["uName"];
     $passwd = $_POST["passwd"];
 
-    $stmt = $conn->prepare("SELECT * FROM masterUsers WHERE uName = ? and passwd = ?;");
+    $stmt = $conn->prepare("SELECT * FROM masterUsers WHERE uName = ? AND passwd = ?;");
     $stmt->bind_param("ss", $uName, $passwd);
     $stmt->execute();
     $result =  $stmt->get_result();

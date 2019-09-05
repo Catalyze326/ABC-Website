@@ -7,10 +7,12 @@ if(isset($_POST["submit"])) {
     $fName = $_POST['fName'];
     $lName = $_POST['lName'];
     $email = $_POST['email'];
+    $time = date('m/d/Y h:i:s a', time());
 
-    $sql = 'INSERT INTO names VALUES(?, ?, ?, ?);';
+
+    $sql = 'INSERT INTO users (fName, lName, email, timeDate) VALUES(?, ?, ?, ?);';
     $stmt = $conn->prepare($sql);
-    $stmt->bind_params('sss', $fName, $lName, $email, date('m/d/Y h:i:s a', time()));
+    $stmt->bind_param('ssss', $fName, $lName, $email, $time);
     $stmt->execute();
 
     header('Location: signUp.php?login=success');
