@@ -108,17 +108,17 @@
                     <div class="col s3"></div>
                     <div class="col s6 center">
                         <label>
-                            <input class="with-gap" name="group1" type="radio"  />
+                            <input class="with-gap" name="group1" name="invest" type="radio"  />
                             <span>Invest</span>
                         </label>
                         <br>
                         <label>
-                            <input class="with-gap" name="group1" type="radio"  />
+                            <input class="with-gap" name="group1" name="buy" type="radio"  />
                             <span>Buy a House</span>
                         </label>
                         <br>
                         <label>
-                            <input class="with-gap" name="group1" type="radio"  />
+                            <input class="with-gap" name="group1" name="sell" type="radio"  />
                             <span>Sell a House</span>
                         </label>
                     </div>
@@ -130,10 +130,6 @@
                     </button>
             </div>
         </form>
-    </div>
-
-
-
-    
+    </div>    
 </body>
 </html>

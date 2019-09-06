@@ -7,16 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
 
     <title>Dashboard</title>
 </head>
 <body>
-
-        <div class="center">
-        <br><br><br>
-        <a href="addUser.php">Add User</a>
-    </div>
 
     <?php
         session_start();
@@ -30,33 +25,19 @@
             echo '<h5 class="center success">You sucessfully logged in!</h5>';
         }
     ?>
+    <div class="center">
+        <h1>Dashboard</h1>
+    </div>
 
 <br><br><br>
 
-    <?php
-        include_once '../connector.php';
-        $sql = "SELECT * FROM users;";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        $results = $stmt->get_result();
+<div class="center">
+    <a href="people.php">People Dashboard</a>
+    <br><br>
+    <a href="editHouses.php">Houses Dashboard</a>
+    <br><br>
+    <a href="inputNewHouse.php">Create New House</a>
+</div>
 
-         echo "<table align=\"center\">
-            <tr>
-                <th>ID</th>    
-                <th>First Name</th>    
-                <th>Last Name</th>    
-                <th>Email</th>    
-                <th>Date Signed Up</th>    
-            </tr>";
-
-        foreach ($results as $result) {
-            echo "<tr>";
-            foreach ($result as $res){
-                echo "<td>$res</td>";
-            }
-            echo"</tr>";
-        }
-        echo '</table>';
-    ?>
 </body>
 </html>
