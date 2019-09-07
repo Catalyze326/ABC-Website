@@ -13,6 +13,8 @@
 </head>
 <body>
 
+<form action="markAsSold.php" method="post"></form>
+
 
 <?php
 session_start();
@@ -35,7 +37,6 @@ $sql = "SELECT * FROM houses;";
 $stmt = $conn->prepare($sql);
 $stmt->execute();
 $results = $stmt->get_result();
-
 
 echo "<table align=\"center\">
             <tr>

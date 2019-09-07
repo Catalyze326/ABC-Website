@@ -11,6 +11,7 @@
     <title>ABC Capital Investing</title>
 </head>
 <body>
+
 <?php
 session_start();
 if ($_SESSION['loggedin'] !== true) {
@@ -18,6 +19,7 @@ if ($_SESSION['loggedin'] !== true) {
 }
 
 ?>
+
 <style>
     body, html {
         overflow: hidden;
@@ -34,7 +36,6 @@ if ($_SESSION['loggedin'] !== true) {
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-
     }
 </style>
 
@@ -66,6 +67,23 @@ if ($_SESSION['loggedin'] !== true) {
     }
 </script>
 
+<?php
+$fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+if (strpos($fullUrl, "login=Success")) {
+    echo '<h5 class="center success">You sucessfully logged in!</h5>';
+} else if (strpos($fullUrl, "upload=notAnImage")) {
+    echo '<h5 class="center error">You did not upload a file</h5>';
+} else if (strpos($fullUrl, "upload=sizeError")) {
+    echo '<h5 class="center error">The file was too big</h5>';
+} else if (strpos($fullUrl, "upload=error")) {
+    echo '<h5 class="center error">Could not upload the file</h5>';
+} else if (strpos($fullUrl, "upload=notFilledOut")) {
+    echo '<h5 class="center error">You did not fill out the form</h5>';
+} else if (strpos($fullUrl, "upload=sucess")) {
+    echo '<h5 class="center success">Successfully added the house</h5>';
+}
+?>
 
 <script>
     function myFunction() {
@@ -77,7 +95,9 @@ if ($_SESSION['loggedin'] !== true) {
         }
     }
 </script>
+
 <br><br>
+
 <form action="createItem.php" method="post" enctype="multipart/form-data">
     <div class="row">
         <div class="col s12">

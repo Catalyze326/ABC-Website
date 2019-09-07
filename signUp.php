@@ -59,10 +59,7 @@
             "  </a>\n" +
             "</div>")
     }
-</script>
-
-
-<script>
+</script><script>
     function myFunction() {
         var x = document.getElementById("myLinks");
         if (x.style.display === "block") {
@@ -76,11 +73,14 @@
     <div class="center"><h1>Sign Up</h1></div>
 
 
-        <?php
+    <?php
         $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
         if(strpos($fullUrl, "login=success")){
             echo "<h5 class='center success'>You successfully signed up</h5>";
+        }else if(strpos($fullUrl, "login=notFilledOut")){
+            echo "<h5 class='center error'>You did not fill it all the way out</h5>";
+
         }
     ?>
 
@@ -110,17 +110,17 @@
                     <div class="col s3"></div>
                     <div class="col s6 center">
                         <label>
-                            <input class="with-gap" name="group1" name="invest" type="radio"  />
+                            <input class="with-gap" name="invest" type="radio"  />
                             <span>Invest</span>
                         </label>
                         <br>
                         <label>
-                            <input class="with-gap" name="group1" name="buy" type="radio"  />
+                            <input class="with-gap" name="buy" type="radio"  />
                             <span>Buy a House</span>
                         </label>
                         <br>
                         <label>
-                            <input class="with-gap" name="group1" name="sell" type="radio"  />
+                            <input class="with-gap" name="sell" type="radio"  />
                             <span>Sell a House</span>
                         </label>
                     </div>

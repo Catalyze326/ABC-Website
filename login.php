@@ -6,28 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-     
     <title>Login</title>
 </head>
 <body>
-    <div class="center">
-        <h3>LOGIN</h3>
-        <form action="backend.php" method="post">
-            <br><br>
-            <input type="text" name="uName" placeholder="User Name">
-            <input type="password" name="passwd" placeholder="Password">
-            <br><br>
-            <button type="submit" name="submit">Login</button>
+<div class="center">
+    <h3>LOGIN</h3>
+    <form action="backend.php" method="post">
+        <br><br>
+        <input type="text" name="uName" placeholder="User Name">
+        <input type="password" name="passwd" placeholder="Password">
+        <br><br>
+        <button type="submit" name="submit">Login</button>
     </form>
 </div>
 
 <?php
-    $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+session_start();
 
-    if(strpos($fullUrl, "login=Failure")){
-        echo "<h5 class='center error'>You're username or password is incorrect</h5>";
-    }
+
+if ($_SESSION['loggedin'] === true) {
+    header("Location: dashboard.php?login=alreadyLoggedIn");
+}
+
+$fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+if (strpos($fullUrl, "login=Failure")) {
+    echo "<h5 class='center error'>You're username or password is incorrect</h5>";
+}
 ?>
 </body>
 </html>

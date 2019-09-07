@@ -74,7 +74,6 @@
     }
 </script>
 
-
     <div class="center centerVert">
         <h1>ABC Captial Investing</h1>
         <h4>Real Estate Investing: Simple as ABC</h4>

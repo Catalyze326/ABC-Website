@@ -23,6 +23,8 @@
         
         if(strpos($fullUrl, "login=Success")){
             echo '<h5 class="center success">You sucessfully logged in!</h5>';
+        }else if(strpos($fullUrl, "login=Success")){
+            echo '<h5 class="center success">You were already logged in!</h5>';
         }
     ?>
     <div class="center">
