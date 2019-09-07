@@ -33,15 +33,16 @@
 </style>
 
 <script>
-    if (screen.width > 600){
+    if (screen.width > 600) {
         document.write("<div class=\"topnav\">\n" +
             "        <a href=\"index.php\">Home</a>\n" +
+            "        <a href=\"signUp.php\">Sign Up</a>\n" +
             "        <a href=\"about.php\">About</a>\n" +
             "        <a href=\"contact.php\">Contact</a>\n" +
             "        <a href=\"mission.php\">Mission</a>\n" +
-            "        <a href=\"signUp.php\">Sign Up</a>\n" +
+            "        <a href=\"houses.php\">Houses</a>\n" +
             "    </div>");
-    }else{
+    } else {
         document.write("\n" +
             "<!-- Top Navigation Menu -->\n" +
             "<div class=\"topnav\">\n" +
@@ -51,6 +52,7 @@
             "        <a href=\"contact.php\">Contact</a>\n" +
             "        <a href=\"mission.php\">Mission</a>\n" +
             "        <a href=\"signUp.php\">Sign Up</a>\n" +
+            "        <a href=\"houses.php\">Houses</a>\n" +
             "  </div>\n" +
             "  <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\">\n" +
             "    <i class=\"fa fa-bars\"></i>\n" +
