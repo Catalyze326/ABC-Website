@@ -60,27 +60,28 @@
 
 
 <script>
-if (screen.width < 600) {
-    document.write('<style>\n' +
-        '.housePage{\n' +
-        '    width: 100%;\n' +
-        '    height: 300px;\n' +
-        '    color: #ddd;\n' +
-        '    position: relative;\n' +
-        '}\n' +
-        '</style>');
-}
+    if (screen.width < 600) {
+        document.write('<style>\n' +
+            '.housePage{\n' +
+            '    width: 100%;\n' +
+            '    height: 300px;\n' +
+            '    color: #ddd;\n' +
+            '    position: relative;\n' +
+            '}\n' +
+            '</style>');
+    }
 </script>
 
 <div class="row">
     <div class="col s12">
 
         <?php
+        $re = '/[^0-9]/m';
         include_once '../connector.php';
 
         $addr = str_replace(".php", "", (str_replace("/", "", $_SERVER[REQUEST_URI])));
         $addr = substr($addr, 6, 3);
-        echo $addr;
+        $addr = preg_replace($re, '', $addr);
 
         $sql = "SELECT * FROM houses WHERE addr LIKE '%$addr%';";
         $stmt = $conn->prepare($sql);

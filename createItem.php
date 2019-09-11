@@ -5,8 +5,6 @@ $target_file = $target_dir . str_replace(' ', '', $_POST['addr']) . '.jpg';
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-
-
 // Check if image file is a actual image or fake image
 if (isset($_POST["submit"])) {
     $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
@@ -16,12 +14,7 @@ if (isset($_POST["submit"])) {
         header("Location: inputNewHouse.php?upload=notAnImage");
         exit();
     }
-//// Check if file already exists
-//    if (file_exists($target_file)) {
-//        header("Location: inputNewHouse.php?upload=fileAlreadyExists");
-//        exit();
-//    }
-// Check file size
+    
     if ($_FILES["fileToUpload"]["size"] > 5000000) {
         header("Location: inputNewHouse.php?upload=sizeError");
         exit();
@@ -29,7 +22,8 @@ if (isset($_POST["submit"])) {
 
     if (!move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo 'file moved ', $target_file;
-        header("Location: inputNewHouse.php?upload=error");
+        $error = $_FILES["file"]["error"];
+        header("Location: inputNewHouse.php?upload=$error");
         exit();
     }
 

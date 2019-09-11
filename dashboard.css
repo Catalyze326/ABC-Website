@@ -1,97 +1,306 @@
-  .error{
-      color: red;
-  }
+@font-face {
+    font-family: headers;
+    src: url(BebasNeue-Regular.otf)
+}
 
-  .success{
-      color: green;
-  }
-  
-  html{
-      background-color: #282828;
-      color: #fff;
-  }
-  .center {
-    margin: 0 auto;
-    width: 50%;
+body, html {
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    color: rgb(187, 187, 187);
+    font-family: headers;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+input {
+    padding-right: 200px;
+}
+
+.center {
+    margin: auto;
+}
+
+.centerVert {
+    padding: 250px 0;
+}
+
+.signUpVert {
+    padding: 150px 0;
+}
+
+.btn {
+    background-color: rgba(187, 187, 187, 0);
+}
+
+input, textarea {
+    color: rgb(187, 187, 187);
+}
+
+
+.signUp {
+    margin: auto;
+    width: 69%;
+}
+
+.success {
+    color: green;
+}
+
+.checkbox {
+    padding: 200px;
+}
+
+p.container {
+    padding: 10px 0;
+    color: rgb(187, 187, 187);
+    font-size: 18px;
+}
+
+p {
+    font-size: 14px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
     text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.house {
+    width: 100%;
+    height: 300px;
+}
+
+
+.housePage {
+    height: 400px;
+    color: #ddd;
+    position: relative;
   }
 
-  h3{
-      color: #fff;
-  }
+.indiPageText{
+    padding-top: 800px;
+    position: relative;
 
-  h5{
-      color: #fff;
-  }
+}
+
+.item {
+    background: #bbb;
+    color: black;
+}
+
+@media screen and (min-width: 600px) {
+    /* Add a black background color to the top navigation */
+    .topnav {
+        background-color: rgba(187, 187, 187, 0);
+        overflow: hidden;
+    }
+
+    /* Style the links inside the navigation bar */
+    .topnav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    /* Change the color of links on hover */
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    /* Add a color to the active/current link */
+    .topnav a.active {
+        color: #fff;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .centerVert {
+        padding: 175px 0;
+    }
+
+    .topnav {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .topnav #myLinks {
+        display: none;
+    }
+
+    .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+
+    .topnav a.icon {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav a:hover {
+        color: #fff;
+    }
+
+    .active {
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h4 {
+        font-size: 24px;
+    }
+
+    .signUp {
+        margin: unset;
+        width: 100%;
+    }
+
+    p {
+        font-size: 17px;
+        color: #fff;
+    }
+
+}
 
   table, th, td {
   border: 1px solid white;
   text-align: center;
 }
 
-  input{
+  .mirrorText{
+    text-align: center;
     border: none;
     color: white;
-    background: #282828;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    width: 300px;
-    border-width: 3px;
-    border-radius: 25px;
-    border: 1px solid #fff;
-  }
-  
-  input:hover{
-    background: #fff;
-    border: #fff;
-    border-radius: 25px;
+    background: transparent;
+    padding: 0px 0px;
+    font-size: 14px;
+    border-width: 0px;
+    border: transparent;
   }
 
-  a{
-    color: #fff;
-    font-size: 16px;
-    border: none;
-    color: white;
-    background: #282828;
-    padding: 10px 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    width: 200px;
-    border-width: 3px;
-    border-radius: 25px;
-    border: 1px solid #fff;
+  .mirrorText:hover{
+    color: #0645AD;
+    border: transparent;
+    background: transparent;
   }
-
-   a:hover{
-    background: #fff;
-    border: #fff;
-    border-radius: 25px;
-    color: #282828;
-  }
-
-  button{
-    border: none;
-    color: white;
-    background: #282828;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    width: 300px;
-    border-width: 3px;
-    border-radius: 25px;
-    border: 1px solid #fff;
-  }
-  
-  button:hover{
-    background: #fff;
-    border: #fff;
-    border-radius: 25px;
-    color: #282828;
-  }
-  
