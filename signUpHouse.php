@@ -35,12 +35,12 @@
 <script>
     if (screen.width > 600) {
         document.write("<div class=\"topnav\">\n" +
-            "        <a href=\"index.php\">Home</a>\n" +
-            "        <a href=\"signUp.php\">Sign Up</a>\n" +
-            "        <a href=\"about.php\">About</a>\n" +
-            "        <a href=\"contact.php\">Contact</a>\n" +
-            "        <a href=\"mission.php\">Mission</a>\n" +
-            "        <a href=\"houses.php\">Houses</a>\n" +
+            "        <a href=\"index.php\"><img src=\"grandpa.png\" alt=\"Home\"></a>\n" +
+            "        <a href=\"signUp.php\" class=\"withPadding\">Sign Up</a>\n" +
+            "        <a href=\"about.php\" class=\"withPadding\">About</a>\n" +
+            "        <a href=\"contact.php\" class=\"withPadding\">Contact</a>\n" +
+            "        <a href=\"mission.php\" class=\"withPadding\">Mission</a>\n" +
+            "        <a href=\"houses.php\" class=\"withPadding\">Houses</a>\n" +
             "    </div>");
     } else {
         document.write("\n" +
@@ -70,64 +70,48 @@
     }
 </script>
 
-    <div class="center"><h1>Sign Up</h1></div>
-
-
     <?php
         $fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
         if(strpos($fullUrl, "login=success")){
             echo "<h5 class='center success'>You successfully signed up</h5>";
-        }else if(strpos($fullUrl, "login=notFilledOut")){
-            echo "<h5 class='center error'>You did not fill it all the way out</h5>";
-
+        }else if(strpos($fullUrl, "login=name=notFilledOut")){
+            echo "<h5 class='center error'>You did not fill out the name bar</h5>";
+        }else if(strpos($fullUrl, "login=addr=notFilledOut")){
+            echo "<h5 class='center error'>You did not fill out the address bar</h5>";
+        }else if(strpos($fullUrl, "login=email=notFilledOut")){
+            echo "<h5 class='center error'>You did not fill out the email bar</h5>";
         }
     ?>
 
 
+
+
     <div class="signUpVert signUp">
-        <form action="sendName.php" method="post">
+                    <h5 class="container center">What is your home worth?<br><br>
+Find the market value of your home for FREE</h5><br><br>
+        <form action="signUpHouseBackend.php" method="post">
             <div class="row">
                 <div class="col s12">
                     <div class="input-field col s6">
-                        <input value="" id="fName" type="text" name="fName" class="validate">
-                        <label class="active" for="fName">First Name</label>
+                        <input value="" id="name" type="text" name="name" class="validate">
+                        <label class="active" for="name">Your Name</label>
                     </div>
                     <div class="input-field col s6">
-                        <input value="" id="lName" type="text"  name="lName" class="validate">
-                        <label class="active" for="lName">Last Name</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s3"></div>
-                    <div class="input-field col s6">
-                        <input value="" id="email" type="text" name="email" class="validate">
+                        <input value="" id="email" type="text"  name="email" class="validate">
                         <label class="active" for="email">Email</label>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                    <div class="col s3"></div>
-                    <div class="col s6 center">
-                        <label>
-                            <input class="with-gap" name="invest" type="radio"  />
-                            <span>Invest</span>
-                        </label>
-                        <br>
-                        <label>
-                            <input class="with-gap" name="buy" type="radio"  />
-                            <span>Buy a House</span>
-                        </label>
-                        <br>
-                        <label>
-                            <input class="with-gap" name="sell" type="radio"  />
-                            <span>Sell a House</span>
-                        </label>
+                <div class="row">
+                    <div class="col s1"></div>
+                    <div class="input-field col s10">
+                        <input value="" id="addr" type="text" name="addr" class="validate">
+                        <label class="active" for="addr">Address</label>
                     </div>
                 </div>
-
+            </div>
             <div class="center">
-                    <button class="btn waves-effect waves-light" type="submit" name="submit">Submit
+                    <button class="btn waves-effect waves-light" type="submit" name="submit">Find Value
                         <i class="material-icons right"></i>
                     </button>
             </div>

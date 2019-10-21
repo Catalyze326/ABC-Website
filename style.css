@@ -7,9 +7,34 @@ body, html {
     height: 100%;
 }
 
-h1, h2, h3, h4, h5 {
+.hidden{
+    visibility: hidden;
+}
+
+.greyBackground{
+    background:
+            linear-gradient(
+                    rgba(0, 0, 0, 0.65),
+                    rgba(0, 0, 0, 0.65)
+            );
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 35px;
+}
+
+h1, h2, h3, h4{
     color: rgb(187, 187, 187);
     font-family: headers;
+}
+
+h5{
+    font-size: 19px;
+    color: rgb(187, 187, 187);
+}
+
+p{
+    color: rgb(187, 187, 187);
+    font-size: 16px;
 }
 
 h1 {
@@ -24,17 +49,24 @@ input {
     margin: auto;
 }
 
-.centerVert {
-    padding: 250px 0;
+.centerVert, .back {
+  position: relative;
+  top: 25%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.btn{
+    z-index: 1000;
 }
 
 .signUpVert {
     padding: 150px 0;
 }
 
-.btn {
-    background-color: rgba(187, 187, 187, 0);
-}
+
 
 input, textarea {
     color: rgb(187, 187, 187);
@@ -58,10 +90,6 @@ p.container {
     padding: 10px 0;
     color: rgb(187, 187, 187);
     font-size: 18px;
-}
-
-p {
-    font-size: 14px;
 }
 
 * {
@@ -205,9 +233,18 @@ p {
         float: left;
         color: #f2f2f2;
         text-align: center;
-        padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
+    }
+
+    .withPadding {
+        padding: 14px 16px;
+    }
+    .topnav img{
+        height: 47px;
+        padding-right: 2px; 
+        -webkit-filter: brightness(90%); /* Safari 6.0 - 9.0 */
+        filter: brightness(90%);
     }
 
     /* Change the color of links on hover */
@@ -227,9 +264,6 @@ p {
         font-family: Arial, Helvetica, sans-serif;
     }
 
-    .centerVert {
-        padding: 175px 0;
-    }
 
     .topnav {
         overflow: hidden;
@@ -266,6 +300,9 @@ p {
 
     h1 {
         font-size: 40px;
+    }
+        h2 {
+        font-size: 32px;
     }
 
     h4 {

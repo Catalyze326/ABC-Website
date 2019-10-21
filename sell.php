@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>ABC Capital Investing</title>
+   <link rel="stylesheet" href="style.css">
+    <title>Invest</title>
 </head>
 <body>
 
@@ -18,11 +17,12 @@
     }
 
     body {
-        background: linear-gradient(
-                rgba(0, 0, 0, 0.55),
-                rgba(0, 0, 0, 0.55)
-        ),
-        url(download.jpg);
+        background:
+                linear-gradient(
+                        rgba(0, 0, 0, 0.65),
+                        rgba(0, 0, 0, 0.65)
+                ),
+                url(download.jpg);
 
         background-position: center;
         background-repeat: no-repeat;
@@ -33,38 +33,10 @@
 </style>
 
 <script>
-    const sleep = (milliseconds) => {
-        return new Promise(resolve => setTimeout(resolve, milliseconds))
-    };
-    $(document).ready(function () {
-        window.setInterval(function () {
-            $("#firstPage").fadeOut();
-            sleep(500).then(() => {
-                $("#secondPage").fadeIn().css("visibility", "visible");
-            });
-        }, 7000);
-    });
-
-    sleep(3500).then(() => {
-        $(document).ready(function () {
-            window.setInterval(function () {
-                $("#secondPage").fadeOut();
-                sleep(500).then(() => {
-                    $("#firstPage").fadeIn();
-                });
-            }, 7000);
-        });
-    });
-
-
-</script>
-
-
-<script>
     if (screen.width > 600) {
         document.write("<div class=\"topnav\">\n" +
             "        <a href=\"index.php\"><img src=\"grandpa.png\" alt=\"Home\"></a>\n" +
-            "        <a href=\"signUp.php\" class=\"withPadding\">Sign Up</a>\n" +
+            "        <a href=\"signUp.php\" class=\"withPadding\">Invest</a>\n" +
             "        <a href=\"about.php\" class=\"withPadding\">About</a>\n" +
             "        <a href=\"contact.php\" class=\"withPadding\">Contact</a>\n" +
             "        <a href=\"mission.php\" class=\"withPadding\">Mission</a>\n" +
@@ -79,7 +51,7 @@
             "        <a href=\"about.php\">About</a>\n" +
             "        <a href=\"contact.php\">Contact</a>\n" +
             "        <a href=\"mission.php\">Mission</a>\n" +
-            "        <a href=\"signUp.php\">Sign Up</a>\n" +
+            "        <a href=\"signUp.php\">Invest</a>\n" +
             "        <a href=\"houses.php\">Houses</a>\n" +
             "  </div>\n" +
             "  <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\">\n" +
@@ -88,41 +60,30 @@
             "</div>")
     }
 </script>
-
-
 <script>
     function myFunction() {
-        let x = document.getElementById("myLinks");
+        var x = document.getElementById("myLinks");
         if (x.style.display === "block") {
             x.style.display = "none";
-            $("#firstPage").show();
-            $("#secondPage").show();
         } else {
             x.style.display = "block";
-            $("#firstPage").hide();
-            $("#secondPage").hide();
         }
     }
 </script>
 
-<div class="center">
-    <h1>ABC Capital Investing</h1>
-    <h4>Real Estate Investing: Simple as ABC</h4>
-</div>
+    <div class="center"><h1>Sell</h1></div>
 
-<div class="centerVert back">
-    <div class="center greyBackground" id="firstPage">
-        <h2>Looking for a passive income?</h2>
-            <a href="signUpInvest.php" class="waves-effect waves-light btn">Contact Us</a>
+    <div class="center">
+        <div class="container">
+            <h5>Everyone knows someone who feels STRESSED about selling a house. We offer a purchase plan, as easy as ABC, where we do all the work and make a fair and timely offer...and you can move on with your life.</h5>
+            <br>
+            <h5>Are you thinking about selling your home?</h5>
+            <br>
+            <h5>Get Free Property Report</h5>
+            <a href="">LINK TO PROPERTY REPORT</a>
+        </div>
     </div>
-</div>
-
-<div class="centerVert back">
-    <div class="center greyBackground hidden" id="secondPage">
-        <h2>We buy houses fast!</h2>
-            <a href="signUpHouse.php" class="waves-effect waves-light btn">Learn More</a>
-    </div>
-</div>
+    
 
 </body>
 </html>
