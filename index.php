@@ -36,27 +36,25 @@
     const sleep = (milliseconds) => {
         return new Promise(resolve => setTimeout(resolve, milliseconds))
     };
-    $(document).ready(function () {
-        window.setInterval(function () {
-            $("#firstPage").fadeOut();
-            sleep(500).then(() => {
-                $("#secondPage").fadeIn().css("visibility", "visible");
-            });
-        }, 7000);
-    });
 
-    sleep(3500).then(() => {
-        $(document).ready(function () {
-            window.setInterval(function () {
-                $("#secondPage").fadeOut();
-                sleep(500).then(() => {
-                    $("#firstPage").fadeIn();
+            $(document).ready(function () {
+                    window.setInterval(function () {
+                        $("#firstPage").fadeOut();
+                        sleep(500).then(() => {
+                            $("#secondPage").fadeIn().css("visibility", "visible");
+                        });
+                    }, 7000);
                 });
-            }, 7000);
-        });
-    });
-
-
+                sleep(3500).then(() => {
+                    $(document).ready(function () {
+                        window.setInterval(function () {
+                            $("#secondPage").fadeOut();
+                            sleep(500).then(() => {
+                                $("#firstPage").fadeIn();
+                            });
+                        }, 7000);
+                    });
+                });
 </script>
 
 
@@ -64,11 +62,10 @@
     if (screen.width > 600) {
         document.write("<div class=\"topnav\">\n" +
             "        <a href=\"index.php\"><img src=\"grandpa.png\" alt=\"Home\"></a>\n" +
-            "        <a href=\"signUp.php\" class=\"withPadding\">Sign Up</a>\n" +
-            "        <a href=\"about.php\" class=\"withPadding\">About</a>\n" +
-            "        <a href=\"contact.php\" class=\"withPadding\">Contact</a>\n" +
-            "        <a href=\"mission.php\" class=\"withPadding\">Mission</a>\n" +
-            "        <a href=\"houses.php\" class=\"withPadding\">Houses</a>\n" +
+            "        <a href=\"invest.php\" class=\"withPadding\">Invest</a>\n" +
+            "        <a href=\"buy.php\" class=\"withPadding\">Buy</a>\n" +
+            "        <a href=\"sell.php\" class=\"withPadding\">Sell</a>\n" +
+            "        <a href=\"info.php\" class=\"withPadding\">Info</a>\n" +
             "    </div>");
     } else {
         document.write("\n" +
@@ -76,11 +73,10 @@
             "<div class=\"topnav\">\n" +
             "  <a href=\"index.php\" class=\"active\">Home</a>\n" +
             "  <div id=\"myLinks\">\n" +
-            "        <a href=\"about.php\">About</a>\n" +
-            "        <a href=\"contact.php\">Contact</a>\n" +
-            "        <a href=\"mission.php\">Mission</a>\n" +
-            "        <a href=\"signUp.php\">Sign Up</a>\n" +
-            "        <a href=\"houses.php\">Houses</a>\n" +
+            "        <a href=\"invest.php\">Invest</a>\n" +
+            "        <a href=\"buy.php\">Buy</a>\n" +
+            "        <a href=\"sell.php\">Sell</a>\n" +
+            "        <a href=\"info.php\">Info</a>\n" +
             "  </div>\n" +
             "  <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\">\n" +
             "    <i class=\"fa fa-bars\"></i>\n" +
@@ -113,14 +109,14 @@
 <div class="centerVert back">
     <div class="center greyBackground" id="firstPage">
         <h2>Looking for a passive income?</h2>
-            <a href="signUpInvest.php" class="waves-effect waves-light btn">Contact Us</a>
+        <a href="signUpInvest.php" class="waves-effect waves-light btn">Contact Us</a>
     </div>
 </div>
 
 <div class="centerVert back">
     <div class="center greyBackground hidden" id="secondPage">
         <h2>We buy houses fast!</h2>
-            <a href="signUpHouse.php" class="waves-effect waves-light btn">Learn More</a>
+        <a href="signUpHouse.php" class="waves-effect waves-light btn">Learn More</a>
     </div>
 </div>
 
