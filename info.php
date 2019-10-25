@@ -84,7 +84,7 @@
         bankruptcy. We also provide an opportunity for private lenders to have a safe and reliable investment...and in
         all of our relationships, may God be glorified.</p>
     <br><br><h5>OUR TEAM</h5>
-    <p>Carolyn and Arnie flipped three houses, with two other couples, in the early 1970's, before it was even a "thing".</p>
+    <p>Carolyn and Arnie flipped three houses, with two other couples, in the early 1970's, before it was even a thing.</p>
 </div>
 </body>
 </html>

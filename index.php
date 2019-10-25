@@ -109,7 +109,7 @@
 <div class="centerVert back">
     <div class="center greyBackground" id="firstPage">
         <h2>Looking for a passive income?</h2>
-        <a href="signUpInvest.php" class="waves-effect waves-light btn">Contact Us</a>
+        <a href="invest.php" class="waves-effect waves-light btn">Contact Us</a>
     </div>
 </div>
 
