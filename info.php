@@ -14,8 +14,8 @@
 <style>
     body {
         background: linear-gradient(
-                rgba(0, 0, 0, 0.8),
-                rgba(0, 0, 0, 0.8)
+                rgba(0, 0, 0, 0.75),
+                rgba(0, 0, 0, 0.75)
         ),
         url(download.jpg);
 
@@ -27,32 +27,14 @@
     }
 </style>
 
-<script>
-    if (screen.width > 600) {
-        document.write("<div class=\"topnav\">\n" +
-            "        <a href=\"index.php\"><img src=\"grandpa.png\" alt=\"Home\"></a>\n" +
-            "        <a href=\"invest.php\" class=\"withPadding\">Invest</a>\n" +
-            "        <a href=\"buy.php\" class=\"withPadding\">Buy</a>\n" +
-            "        <a href=\"sell.php\" class=\"withPadding\">Sell</a>\n" +
-            "        <a href=\"info.php\" class=\"withPadding\">Info</a>\n" +
-            "    </div>");
-    } else {
-        document.write("\n" +
-            "<!-- Top Navigation Menu -->\n" +
-            "<div class=\"topnav\">\n" +
-            "  <a href=\"index.php\" class=\"active\">Home</a>\n" +
-            "  <div id=\"myLinks\">\n" +
-            "        <a href=\"invest.php\">Invest</a>\n" +
-            "        <a href=\"buy.php\">Buy</a>\n" +
-            "        <a href=\"sell.php\">Sell</a>\n" +
-            "        <a href=\"info.php\">Info</a>\n" +
-            "  </div>\n" +
-            "  <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\">\n" +
-            "    <i class=\"fa fa-bars\"></i>\n" +
-            "  </a>\n" +
-            "</div>")
-    }
-</script>
+<div class="topnav">
+<a href="index.php"> <img src="grandpa.png" alt="Home"></a>
+<a href="invest.php" class="withPadding">Invest</a>
+<a href="buy.php" class="withPadding">Buy</a>
+<a href="sell.php" class="withPadding">Sell</a>
+<a href="info.php" class="withPadding">Info</a>
+</div>
+
 
 <script>
     function myFunction() {
@@ -72,11 +54,12 @@
     <h5>Phone: (240) 863-2033</h5>
     <h5>Email: AbcCapitalInvesting@gmail.com</h5>
     <a href="AbcCapitalInvesting.com"><h5>Website: AbcCapitalInvesting.com</h5></a>
-    
-    <br><br><p>A residential redevelopment company working in Montgomery and Prince George's Counties. Working together with
+
+    <br><br>
+    <p>A residential redevelopment company working in Montgomery and Prince George's Counties. Working together with
         homeowners to avoid foreclosure and/or bankruptcy, as we buy, fix, and sell homes, ultimately building nicer and
         happier communities.</p>
-        <br><br>
+    <br><br>
     <h5>OUR MISSION</h5>
     <p>Our mission is to help people find solutions to their real estate problems and to improve neighborhoods. We will
         treat our clients and our team members with dignity and respect. Our goal is to help people, where others may
@@ -84,7 +67,25 @@
         bankruptcy. We also provide an opportunity for private lenders to have a safe and reliable investment...and in
         all of our relationships, may God be glorified.</p>
     <br><br><h5>OUR TEAM</h5>
-    <p>Carolyn and Arnie flipped three houses, with two other couples, in the early 1970's, before it was even a thing.</p>
+</div>
+<div class="row people">
+    <div class="container">
+            <img src="info.jpeg" class="col l6 offset-l3 s10 offset-s1 m6 offset-m3" alt="us"></div>
+        <div class="col l3 offset-l3"><h3>Carolyn Ensfield</h3>
+            <p>Marketing, Design, & Staging</p>
+            <p>Carolyn loves houses and floor plans. She easily envisions the most optimum utilization of space in a
+                home.
+                In an earlier life, she was a licensed realtor in Virginia.
+            </p></div>
+        <div class="col l3">
+            <h3>Arnold Ensfield</h3>
+            <p>Acquisitions & Project Management</p>
+            <p>Arnold's passion for helping people matches his attention to detail in getting things done. His former
+                careers in nuclear submarines, missile defense, and Christian camping, prepare him in many respects for
+                his new career in real estate investing.
+            </p></div>
+    </div>
+
 </div>
 </body>
 </html>

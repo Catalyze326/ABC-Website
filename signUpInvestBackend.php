@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST["submit"])) {
+// if(isset($_POST["submit"])) {
     session_start();
     include_once 'connector.php';
 
@@ -30,4 +30,4 @@ if(isset($_POST["submit"])) {
     header('Location: signUpInvest.php?signUp=success');
     exit();
 
-}
+// }

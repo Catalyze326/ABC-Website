@@ -29,32 +29,13 @@
 </style>
 
 
-<script>
-    if (screen.width > 600) {
-        document.write("<div class=\"topnav\">\n" +
-            "        <a href=\"index.php\"><img src=\"grandpa.png\" alt=\"Home\"></a>\n" +
-            "        <a href=\"invest.php\" class=\"withPadding\">Invest</a>\n" +
-            "        <a href=\"buy.php\" class=\"withPadding\">Buy</a>\n" +
-            "        <a href=\"sell.php\" class=\"withPadding\">Sell</a>\n" +
-            "        <a href=\"info.php\" class=\"withPadding\">Info</a>\n" +
-            "    </div>");
-    } else {
-        document.write("\n" +
-            "<!-- Top Navigation Menu -->\n" +
-            "<div class=\"topnav\">\n" +
-            "  <a href=\"index.php\" class=\"active\">Home</a>\n" +
-            "  <div id=\"myLinks\">\n" +
-            "        <a href=\"invest.php\">Invest</a>\n" +
-            "        <a href=\"buy.php\">Buy</a>\n" +
-            "        <a href=\"sell.php\">Sell</a>\n" +
-            "        <a href=\"info.php\">Info</a>\n" +
-            "  </div>\n" +
-            "  <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\">\n" +
-            "    <i class=\"fa fa-bars\"></i>\n" +
-            "  </a>\n" +
-            "</div>")
-    }
-</script>
+<div class="topnav">
+<a href="index.php"> <img src="grandpa.png" alt="Home"></a>
+<a href="invest.php" class="withPadding">Invest</a>
+<a href="buy.php" class="withPadding">Buy</a>
+<a href="sell.php" class="withPadding">Sell</a>
+<a href="info.php" class="withPadding">Info</a>
+</div>
 
 <script>
     function myFunction() {
@@ -67,7 +48,7 @@
     }
 </script>
 <div class="row">
-    </a>
+
     <div class="col s12">
         <?php
         include_once 'connector.php';
@@ -77,41 +58,46 @@
         $stmt->execute();
         $results = $stmt->get_result();
 
-        foreach ($results as $result) {
-            echo "
-            <script>
+        if (sizeof($results) > 0){
+            
+            foreach ($results as $result) {
+                echo "
+                <script>
                 if (screen.width > 600) {
                     document.write('<div class=\"col s3 item\">');
                 }else{
                     document.write('<div class=\"col s12 item\">');
                 }
-            </script>
+                </script>
                 <div class=\"w3-content w3-display-container\">
-                    <br>
-                    ";
-
-            foreach (array_values($result) as $j => $item) {
-                $slideNum = 1;
-                if ($j === 0){
-                    $slideNum = ((int) $item);
-                }else {
-                    if ($j === 1) {
-                        list($temp, $imageName) = explode(": ", $item);
-                        echo "<p class='center'>$imageName</p><br>";
-                        $imageName = str_replace(' ', '',$imageName);
-                        $link = 'houses/' . $imageName . '.php';
-                        echo "
-                        <a href='$link'><img class=\"house\" src=\"uploads/$imageName.jpg\" ></a>
-                        ";
-                    } 
-                    echo "<p>$item</p>";
+                <br>
+                ";
+                
+                foreach (array_values($result) as $j => $item) {
+                    $slideNum = 1;
+                    if ($j === 0){
+                        $slideNum = ((int) $item);
+                    }else {
+                        if ($j === 1) {
+                            list($temp, $imageName) = explode(": ", $item);
+                            echo "<p class='center'>$imageName</p><br>";
+                            $imageName = str_replace(' ', '',$imageName);
+                            $link = 'houses/' . $imageName . '.php';
+                            echo "
+                            <a href='$link'><img class=\"house\" src=\"uploads/$imageName.jpg\" ></a>
+                            ";
+                        } 
+                        echo "<p>$item</p>";
+                    }
                 }
-            }
-            echo "
-            </div>
+                echo "
+                </div>
                 </div>";
+            }
+        }else{
+            echo '<h3 class="center">Coming soon, when we have another house to sell.</h3>';
         }
-        ?>
+            ?>
     </div>
 </div>
 </body>

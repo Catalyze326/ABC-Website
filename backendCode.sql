@@ -14,5 +14,6 @@ CREATE TABLE peopleInvesting
     name  varchar(35) NOT NULL,
     email VARCHAR(50) NOT NULL,
     message  VARCHAR(8192),
-    time  long
+    time  long,
+    emailSent BOOLEAN DEFAULT FALSE
 );
