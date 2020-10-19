@@ -30,11 +30,11 @@
 
 
 <div class="topnav">
-<a href="index.php"> <img src="grandpa.png" alt="Home"></a>
-<a href="invest.php" class="withPadding">Invest</a>
+<a href="index.html"> <img src="grandpa.png" alt="Home"></a>
+<a href="invest.html" class="withPadding">Invest</a>
 <a href="buy.php" class="withPadding">Buy</a>
-<a href="sell.php" class="withPadding">Sell</a>
-<a href="info.php" class="withPadding">Info</a>
+<a href="sell.html" class="withPadding">Sell</a>
+<a href="info.html" class="withPadding">Info</a>
 </div>
 
 <script>

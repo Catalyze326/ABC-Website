@@ -35,22 +35,22 @@
 <script>
     if (screen.width > 600) {
         document.write("<div class=\"topnav\">\n" +
-            "        <a href=\"index.php\"><img src=\"grandpa.png\" alt=\"Home\"></a>\n" +
-            "        <a href=\"invest.php\" class=\"withPadding\">Invest</a>\n" +
+            "        <a href=\"index.html\"><img src=\"grandpa.png\" alt=\"Home\"></a>\n" +
+            "        <a href=\"invest.html\" class=\"withPadding\">Invest</a>\n" +
             "        <a href=\"buy.php\" class=\"withPadding\">Buy</a>\n" +
-            "        <a href=\"sell.php\" class=\"withPadding\">Sell</a>\n" +
-            "        <a href=\"info.php\" class=\"withPadding\">Info</a>\n" +
+            "        <a href=\"sell.html\" class=\"withPadding\">Sell</a>\n" +
+            "        <a href=\"info.html\" class=\"withPadding\">Info</a>\n" +
             "    </div>");
     } else {
         document.write("\n" +
             "<!-- Top Navigation Menu -->\n" +
             "<div class=\"topnav\">\n" +
-            "  <a href=\"index.php\" class=\"active\">Home</a>\n" +
+            "  <a href=\"index.html\" class=\"active\">Home</a>\n" +
             "  <div id=\"myLinks\">\n" +
-            "        <a href=\"invest.php\">Invest</a>\n" +
+            "        <a href=\"invest.html\">Invest</a>\n" +
             "        <a href=\"buy.php\">Buy</a>\n" +
-            "        <a href=\"sell.php\">Sell</a>\n" +
-            "        <a href=\"info.php\">Info</a>\n" +
+            "        <a href=\"sell.html\">Sell</a>\n" +
+            "        <a href=\"info.html\">Info</a>\n" +
             "  </div>\n" +
             "  <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"myFunction()\">\n" +
             "    <i class=\"fa fa-bars\"></i>\n" +

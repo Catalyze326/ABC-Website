@@ -29,11 +29,10 @@
 </style>
 
 <div class="topnav">
-<a href="index.php"> <img src="grandpa.png" alt="Home"></a>
-<a href="invest.php" class="withPadding">Invest</a>
-<a href="buy.php" class="withPadding">Buy</a>
-<a href="sell.php" class="withPadding">Sell</a>
-<a href="info.php" class="withPadding">Info</a>
+<a href="index.html"> <img src="grandpa.png" alt="Home"></a>
+<a href="invest.html" class="withPadding">Invest</a>
+<a href="sell.html" class="withPadding">Sell</a>
+<a href="info.html" class="withPadding">Info</a>
 </div>
 
 <script>
@@ -46,20 +45,6 @@
         }
     }
 </script>
-
-<?php
-$fullUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-
-if (strpos($fullUrl, "login=success")) {
-    echo "<h5 class='center success'>You successfully signed up</h5>";
-} else if (strpos($fullUrl, "login=name=notFilledOut")) {
-    echo "<h5 class='center error'>You did not fill out the name bar</h5>";
-} else if (strpos($fullUrl, "login=addr=notFilledOut")) {
-    echo "<h5 class='center error'>You did not fill out the address bar</h5>";
-} else if (strpos($fullUrl, "login=email=notFilledOut")) {
-    echo "<h5 class='center error'>You did not fill out the email bar</h5>";
-}
-?>
 
 <div class="row">
     <div class="col s12">

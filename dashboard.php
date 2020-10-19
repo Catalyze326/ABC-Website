@@ -32,7 +32,7 @@
 <script>
     if (screen.width > 600) {
         document.write("<div class=\"topnav\">\n" +
-            "        <a href=\"index.php\">Home</a>\n" +
+            "        <a href=\"index.html\">Home</a>\n" +
             "        <a href=\"signUp.php\">Sign Up</a>\n" +
             "        <a href=\"about.php\">About</a>\n" +
             "        <a href=\"contact.php\">Contact</a>\n" +
@@ -43,7 +43,7 @@
         document.write("\n" +
             "<!-- Top Navigation Menu -->\n" +
             "<div class=\"topnav\">\n" +
-            "  <a href=\"index.php\" class=\"active\">Home</a>\n" +
+            "  <a href=\"index.html\" class=\"active\">Home</a>\n" +
             "  <div id=\"myLinks\">\n" +
             "        <a href=\"about.php\">About</a>\n" +
             "        <a href=\"contact.php\">Contact</a>\n" +
