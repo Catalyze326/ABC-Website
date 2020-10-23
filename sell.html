@@ -7,31 +7,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <title>Sign Up</title>
 </head>
-<body>
+<div>
 
 <style>
-    body {
-        background: linear-gradient(
-                rgba(0, 0, 0, 0.65),
-                rgba(0, 0, 0, 0.65)
-        ),
-        url(download.jpg);
 
-        background-position: center;
-        background-repeat: no-repeat;
+    body {
         background-size: cover;
-        background-attachment: fixed;
+        background: linear-gradient(
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)
+        ), url(download.jpg) no-repeat fixed center;
 
     }
 </style>
 
 <div class="topnav">
-<a href="index.html"> <img src="grandpa.png" alt="Home"></a>
-<a href="invest.html" class="withPadding">Invest</a>
-<a href="sell.html" class="withPadding">Sell</a>
-<a href="info.html" class="withPadding">Info</a>
+    <a href="index.html"> <img src="grandpa.png" alt="Home"></a>
+    <a href="invest.html" class="withPadding">Invest</a>
+    <a href="sell.html" class="withPadding">Sell</a>
+    <a href="info.html" class="withPadding">Info</a>
 </div>
 
 <script>
@@ -45,33 +42,21 @@
     }
 </script>
 
-<div class="signUpVert">
-    <p class="container center" style="font-size: 22px;">What is your home worth?<br><br>
-        Find the market value of your home for <strong>free</strong>.</p><br><br>
-
-<form action="sellBackend.php" method="post">
-    <div class="row">
-        <div class="input-field col s12 l5 offset-l1">
-            <input value="" id="name" type="text" name="name" class="validate">
-            <label class="active" for="name" style="font-size: 20px;">Your Name</label>
-        </div>
-        <div class="input-field col s12 l5">
-            <input value="" id="email" type="text" name="email" class="validate">
-            <label class="active" for="email" style="font-size: 20px;">Email</label>
-        </div>
-        <div class="input-field col s12 l8 offset-l2">
-            <input value="" id="addr" type="text" name="addr" class="validate">
-            <label class="active" for="addr" style="font-size: 20px;">Address</label>
-        </div>
-    </div>
-    <div class="center">
-        <button class="btn waves-effect waves-light" type="submit" name="submit">Submit
-            <i class="material-icons right"></i>
-        </button>
-    </div>
-</form>
+<div class="center">
+    <p class="" style="font-size: 22px;">
+        What is your home worth?
+        <br><br>
+        Find the market value of your home for <strong>free</strong>.</p>
+    <br><br>
 </div>
 
+<div class="center">
+    <iframe class="myIframe" src="https://docs.google.com/forms/d/e/1FAIpQLScMghkBj1fVaTQfuL2UO_qBq6XxbC-tc4L_6L3y_Ra4Y7PzwA/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe></div>
+</div>
+
+<!--<script type="text/javascript" language="javascript">-->
+<!--    $('.myIframe').css('height', $(window).height()+'px');-->
+<!--</script>-->
 
 </body>
 </html>
